@@ -1,424 +1,116 @@
 :root {
-  --primary-text-color: rgba(33, 33, 33, 1);
-  --dop-text-color: rgba(117, 117, 117, 1);
-  --title-text-color: rgba(33, 150, 243, 1);
-  --hero-color: rgba(47, 48, 58, 1);
-  --h-text-color: rgba(255, 255, 255, 1);
-  --f-text-color: rgba(255, 255, 255, 0.6);
-  --logo-color: rgba(0, 0, 0, 1);
-  --button-color: rgba(245, 244, 250, 1);
-  --card-border: rgba(238, 238, 238, 1);
+  --wrapper-width: 480px;
+  --add-to-content: 50px;
 }
-
-ul {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  /* padding: 0px; */
-  list-style-type: none;
-}
+/* 
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
 
 body {
-  background-color: var(--h-text-color);
-  font-family: 'Roboto', sans-serif;
-  color: var(--primary-text-color);
-  letter-spacing: 0.03em;
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.container {
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.logo,
-.logof {
-  text-decoration: none;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--logo-color);
-}
+/* * {
+  box-sizing: border-box;
+} */
 
-/* Site nav */
-.site-nav .link:hover,
-.site-nav .link:focus,
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
-  color: var(--title-text-color);
-}
-
-.site-nav .link.current {
-  color: var(--title-text-color);
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
 }
 
 .list {
-  padding: 0;
+  padding: 20px;
   margin: 0;
   list-style: none;
 }
 
-.site-nav .link,
-.contacts-nav .link {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.list-item:not(:last-child) {
+  margin-bottom: 5px;
 }
 
-.main-nav {
-  display: flex;
+.list-link {
+  display: inline-flex;
   align-items: center;
-}
-
-.site-nav,
-.contacts-nav {
-  display: flex;
-}
-
-.contacts-nav {
-  margin-left: auto;
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav {
-  margin-left: 93px;
-}
-
-.contacts-nav .item + .item {
-  margin-left: 50px;
-}
-
-/* section hero */
-.hero {
-  text-align: center;
-  background-color: var(--hero-color);
-}
-
-.hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  padding-top: 200px;
-  color: var(--h-text-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.button-primary {
-  display: inline-block;
-  padding: 10px 32px;
-  margin-bottom: 200px;
-  min-width: 200px;
-  border-radius: 4px;
-  text-align: center;
-  border: 1px solid transparent;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  background-color: var(--title-text-color);
-  color: var(--h-text-color);
-}
-
-/* section about */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.about {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.about-card {
-  display: flex;
-}
-
-.about-card .item {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.about-a {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  line-height: 1.17;
-  color: var(--primary-text-color);
-}
-
-.about-b {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--dop-text-color);
-}
-
-.about-card .item {
-  margin-right: 30px;
-}
-
-.about-card .item:last-child {
-  margin-right: 0px;
-}
-
-/* чем занимаемся */
-.what-doing,
-.team {
-  margin-top: 0px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  color: var(--primary-text-color);
-  text-align: center;
-}
-
-.what-doing {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.what-doing-title {
-  font-weight: 700;
-  font-size: 36px;
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-.card-doing {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 1170px;
-  padding: 0;
-}
-
-.card-doing .item {
-  margin-right: 30px;
-  /* margin-bottom: 94px; */
-}
-
-.card-doing .item:last-child {
-  margin-right: 0px;
-}
-
-/* наша команда */
-.team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.team-card {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 1170px;
-}
-
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-.name-card {
-  margin: 0px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.17;
-  color: var(--primary-text-color);
-}
-
-.specialty {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.17;
-  color: var(--dop-text-color);
-}
-
-.team-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background: var(--h-text-color);
-  border: 1px solid;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.team-card .item {
-  margin-right: 30px;
-  /* border: 1px solid; */
-  box-sizing: border-box;
-
-  /* flex-basis: calc(100% / 3 - 30); */
-}
-
-.team-card .item:last-child {
-  margin-right: 0;
-}
-
-/* section foot */
-.page-footer {
-  background-color: var(--hero-color);
-}
-
-.logof {
-  margin: 0;
-  padding-top: 60px;
-  margin-bottom: 20px;
-  color: var(--h-text-color);
-  background-color: var(--hero-color);
-}
-
-.adr {
-  font-style: normal;
-  color: var(--h-text-color);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.cont-text {
-  margin: 0;
-  margin-bottom: 9px;
-}
-
-.contacts-navf .link {
-  margin-bottom: 9px;
+  color: currentColor;
   text-decoration: none;
-  color: var(--f-text-color);
+  font-size: 32px;
 }
 
-.contacts-navf {
-  padding: 0;
-  padding-bottom: 60px;
+/* Менять тип не обязательно, потому что это flex-элемент, ссылка это flex-контейнер */
+.list-link::before,
+.list-link::after {
+  display: inline-block;
+  content: '';
+  width: 24px;
+  height: 24px;
 }
 
-/* portfolio */
-
-.buttonp,
-.our-works {
-  display: flex;
-  flex-wrap: wrap;
+/* Добавляем иконку огня перед текстом ссылки */
+.list-link::before {
+  margin-right: 16px;
+  background-image: url('https://image.flaticon.com/icons/svg/785/785116.svg');
 }
 
-.buttonp {
-  padding-top: 94px;
-  padding-bottom: 50px;
-  justify-content: center;
+/* Добавляем и прячем иконку кота после текста ссылки */
+.list-link::after {
+  display: none;
+  margin-left: 16px;
+  background-image: url('https://image.flaticon.com/icons/svg/616/616430.svg');
 }
 
-.item-b {
-  margin-right: 8px;
+.list-link:hover {
+  color: #2196f3;
 }
 
-.item-b:last-child {
-  margin-right: 0px;
-}
-
-.buttonp .button {
+/* Показываем иконку кота при ховере по ссылке */
+.list-link:hover::after {
   display: block;
-  padding: 6px 22px;
-  border-radius: 4px;
 }
 
-.button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--primary-text-color);
-  letter-spacing: 0.03em;
-  background-color: var(--button-color);
-  text-align: center;
-  border-color: transparent;
-}
-
-.buttonp .button:hover,
-.buttonp .button:focus {
-  color: var(--h-text-color);
-  background-color: var(--title-text-color);
-}
-
-.our-works {
-  padding: 0;
-  padding-bottom: 94px;
-}
-
-/* Наши работы */
-.card-content {
-  padding: 20px 24px;
-  background: var(--h-text-color);
-  border: 1px solid var(--card-border);
-  box-sizing: border-box;
-}
-
-.photo-work {
-  margin-left: 30px;
-  padding-bottom: 30px;
-}
-
-.photo-work:nth-child(3n + 1) {
-  margin-left: 0px;
-}
-
-.heading-work {
-  margin: 0;
-  margin-bottom: 4px;
-  font-family: inherit;
+/* .tile::before {
+  position: absolute;
+  top: -32px;
+  width: 100%;
+  content: '';
   font-weight: 700;
-  font-size: 18px;
-}
-
-.description {
-  margin: 0;
-  font-family: inherit;
-  font-size: 16px;
-  color: var(--dop-text-color);
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  /* outline: 2px solid tomato; */
-}
-
-/* .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  font-size: 20px;
+  text-align: center;
 } */
+/* 
 
-.page-header {
-  /* border-bottom: 1px solid tomato; */
+
+.no-repeat::before {
+  content: 'no-repeat';
 }
+
+
+.repeat-x::before {
+  content: 'repeat-x';
+}
+
+
+
+.repeat-y::before {
+  content: 'repeat-y';
+}
+
+
+
+.repeat::before {
+  content: 'repeat';
+} */
